@@ -16,8 +16,6 @@ public class LinkStorage {
             if (!this.myCrappyStorage.containsKey(plainHttpHost)) {
                 this.myCrappyStorage.put(plainHttpHost, plainHttpHost);
                 neue.add(plainHttpHost);
-                System.out.println("Neuer Pagelink: " + plainHttpHost);
-
             }
         }
         return neue;
