@@ -26,6 +26,7 @@ public class StartSlurp implements SurfBotListener {
     }
 
     public void doneSurfing(ArrayList<String> linksFound, String myVisitedUrl) {
+        this.linkStorage.storeVisited(myVisitedUrl);
         for (String pageLink : this.linkStorage.speicherNeueLinks(linksFound)) {
             SurfBot s = new SurfBot(pageLink, this, this.useProxy);
             this.executor.submit(s);
